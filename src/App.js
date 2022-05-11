@@ -1,21 +1,18 @@
-/*eslint-disable*/
+import React, {useState,useEffect} from 'react';
+import { Link, Route} from 'react-router-dom';
+import {connect} from 'react-redux';
 
-import './App.css';
-import React, { useEffect,useRef, useState } from 'react';
+
 
 function App() {
-    const [files, setFiles] = useState('');
-
-    return (
-      <div>
-    <header>
-        <h1>ZIP</h1>
-        <a href="#" className="btnCall">
-            <span>메뉴호출</span>
+  return (
+    <div className="App">
+      <h1 className="title">오늘의 나</h1>
+       <a href="#" className="btnCall">
+            <span className="hide">메뉴호출</span>
         </a>
-    </header>
-      </div>
-    )
+    </div>
+  )
+}
 
-  }
-export default App;
+export default App
