@@ -11,6 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#root{
+   width:387px;
+  margin:0 auto;
+}
 .btnCall {
   display: block;
   width: 40px;
@@ -29,7 +33,6 @@ code {
   position: absolute;
   top: 0;
   left: 0;
-  transition: top 0.5s 0s, transform 0.5s 0.5s;
 }
 
 .btnCall::after {
@@ -41,7 +44,6 @@ code {
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
 }
 
 .btnCall span {
@@ -54,22 +56,9 @@ code {
   left: 0;
   margin-top: -1px;
   text-indent: -9999px;
-  transition: 0.5s;
 }
-
-.btnCall:hover::before {
-  transform: rotate(45deg);
-  top: calc(50% - 1px);
-}
-
-.btnCall:hover::after {
-  transform: rotate(-45deg);
-  bottom: calc(50% - 1px);
-}
-
-.btnCall:hover span {
-  transform: translateX(100%);
-  opacity: 0;
+.txt{
+  text-align: left;
 }
 .title{
   text-align:center;

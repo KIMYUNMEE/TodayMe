@@ -11,6 +11,8 @@ function App() {
        <a href="#" className="btnCall">
             <span className="hide">메뉴호출</span>
         </a>
+      <p className="txt">오늘의 나는</p>
+      <strong>0%</strong>
     </div>
   )
 }
