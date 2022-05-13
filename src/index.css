@@ -12,9 +12,69 @@ code {
     monospace;
 }
 #root{
-   width:387px;
+  max-width:387px;
   margin:0 auto;
 }
+/* 
+
+
+
+
+
+
+.article{
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #888;
+  margin-bottom: 25px;
+  
+}
+.article span{
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  padding-bottom: 10px;
+
+}
+table th{
+   border-bottom: 3px solid #333; 
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 5px;
+  width:25%;
+}
+table td{
+  font-size: 13px;
+  text-align: center;
+}
+
+.con{padding:0 8px;display: inline-block;}
+.input{
+  display: none;
+}
+.show{
+  display: block;
+} */
+header {
+  margin-bottom: 80px;
+}
+li{
+  list-style:none;
+}
+.title {
+  text-align: center;
+  color: #333;
+  font-size: 20px;
+
+}
+
+.txt {
+  display: inline-block;
+
+}
+.update,
+.delete{border:1px solid red; color:#333;padding:10px; display: inline-block;}
 .btnCall {
   display: block;
   width: 40px;
@@ -45,7 +105,6 @@ code {
   bottom: 0;
   left: 0;
 }
-
 .btnCall span {
   display: block;
   width: 100%;
@@ -57,10 +116,90 @@ code {
   margin-top: -1px;
   text-indent: -9999px;
 }
-.txt{
+input[type="text"] {
+  width: 30px;
+  border: none;
+  border-bottom: 1px solid #333;
+  display: inline-block;
+}
+
+.num {
+  font-size: 50px;
+  color: #333;
+}
+
+.txt_wrap {
+  text-align: right;
+  position: relative;
+}
+
+.icon {
+  width: 160px;
+  height: 160px;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.modal {
+  margin-top: 20px;
+  padding: 20px;
+  background: #eee;
   text-align: left;
 }
-.title{
-  text-align:center;
-  font-size:20px;
+footer ul {
+  width: 375px;
+  position: absolute;
+  bottom: 0;
+} 
+
+footer ul li {
+  border-top: 1px solid #333;
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  list-style: none;
 }
+
+footer ul li a {
+  display: block;
+  padding-top: 1.56rem;
+  font-size: .41rem;
+  color: #737373;
+  text-align: center;
+  line-height: 1rem;
+}
+
+footer ul li:nth-child(1) a {
+  background: url(../public/ico_home.png) no-repeat top 0.55rem center / 1rem auto;
+}
+
+footer ul li:nth-child(2) a {
+  position: absolute;
+  top: -0.4rem;
+  text-indent: -9999999999999999999999px;
+  padding-top: 0;
+  left: 50%;
+  z-index: 60;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background: url(../public/btn_plus.png) no-repeat center / 1rem auto #fff;
+  box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
+  transform: translateX(-50%);
+} 
+
+footer ul li:nth-child(3) a {
+  background: url(../public/menu_book_FILL0_wght400_GRAD0_opsz48.png) no-repeat top 0.55rem center / 1rem auto;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+
+  opacity: 1;
+
+}
+.inputBox{
+  margin-top:80px;
+}
+input[type="text"].txt1{ width:300px;display:block;}
