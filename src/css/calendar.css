@@ -1,0 +1,129 @@
+.title_wrap {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.date_title {
+    font-size: 14px;
+    color: #a88f71;
+    text-align: left;
+    margin: 20px 0;
+    width: 100%;
+}
+
+#input_todo {
+    font-size: 16px;
+    margin-top: 30px;
+    border: none;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #333;
+}
+
+
+.btn_todo {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.btn_todo button {
+    margin: 0 5px;
+}
+
+.btn_write {
+
+    border: 0;
+    outline: 0;
+    height: 28px;
+    line-height: 28px;
+    position: relative;
+    padding: 0 15px;
+    background: #a88f71;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.button_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.btn_reset {
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    text-decoration: underline;
+    position: relative;
+    padding: 0 10px;
+    background: #a88f71;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.dot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    background-color: #f87171;
+    border-radius: 50%;
+    display: flex;
+}
+
+.react-calendar {
+    width: 100%;
+}
+
+.react-datepicker-wrapper {
+    text-align: right;
+    margin-top: 80px;
+}
+
+.text-gray-500 {
+    margin: 20px 0;
+    text-align: right;
+    font-size: 14px;
+}
+
+.react-datepicker-popper {
+    inset: auto auto 0px 43% !important;
+}
+
+.react-calendar__navigation__next2-button,
+.react-calendar__navigation__prev2-button {
+    display: none;
+}
+
+.todays {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.important_data {
+    margin-bottom: 200px;
+}
+
+.date_wrap {
+    display: flex;
+    position: relative;
+    margin-bottom: 9px;
+
+
+}
+
+.date_wrap p:nth-child(2) {
+    margin: 0 20px;
+}
+
+input[type="text"] {
+    border: none;
+    width: 120px;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+}

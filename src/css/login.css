@@ -1,0 +1,13 @@
+.reset {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+}

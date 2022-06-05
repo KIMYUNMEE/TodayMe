@@ -1,0 +1,15 @@
+.loading_title {
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loading_title p {
+    font-size: 25px;
+    color: #333;
+    text-align: center;
+
+}
