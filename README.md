@@ -1,6 +1,6 @@
 # TodayMe : 오늘의 나 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React기반의 개인 프로젝트입니다.
 
 ## Available Scripts
 
