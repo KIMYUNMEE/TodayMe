@@ -12,7 +12,8 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 
 그렇게 저는 Todo(CRUD)를 기반인 '오늘의 나'라는 사이트를 제작하게 되었습니다.
 
-### `npm start`
+### 필수기능
+### 첫 로그인 기능
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
