@@ -56,6 +56,11 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## 추가기능
 
+
+### 오늘하루 해야할 일을 완료했을시 체크할때마다 '나의 하루 ' %가 올라가기
+
+### '나의 하루'가 100% 만족하는 횟수가 잦아질 수록 나만의 나무 무럭무럭 자라기
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
