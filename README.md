@@ -1,10 +1,11 @@
 # TodayMe : 오늘의 나 
 
-React기반의 개인 프로젝트입니다.
+React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 
-## Available Scripts
+## 제작하게 된 이유
 
-In the project directory, you can run:
+프로그래밍을 공부하면서 제일 먼저 기초적인 부분부터 이해하고 혼자 구현할 수 있어야 한다고 생각했습니다.
+기초를 잘 다듬어야 응용함에 있어 막히지 않을거라 판단되어 혼자 어떤 웹사이트를 만들까 하다가 제가 많이 이용하는 Todo(CRUD)를 기반으로 사이트를 만들게 되었습니다.
 
 ### `npm start`
 
