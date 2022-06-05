@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# TodayMe : 오늘의 나 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
