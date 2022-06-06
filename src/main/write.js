@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import "../css/write.css";
+import "../css/index.css";
 function Writeform(props) {
   let [write, setwrite] = useState([]);
   let [writeH, setHwrite] = useState([]);
@@ -8,7 +9,7 @@ function Writeform(props) {
   let [writeI, setIwrite] = useState([]);
 
   return (
-    <div className="editor">
+    <div className="write">
       <b>오늘의 내가 해야할 일</b>
       <input
         className="text_area"
@@ -22,7 +23,7 @@ function Writeform(props) {
         <p className="day">시간</p>
         <form className="time_wrap" autoComplete="off">
           <input
-            className="time_txt hour"
+            className="time_txt"
             placeholder="00"
             maxLength="2"
             type="number"
@@ -34,7 +35,7 @@ function Writeform(props) {
             }}
           ></input>
           <input
-            className="time_txt minute"
+            className="time_txt"
             placeholder="00"
             type="number"
             maxLength="2"
@@ -135,12 +136,13 @@ function Writeform(props) {
             ? alert("모두 다 입력해주세요")
             : props.dispatch({ type: "할일쓰기창닫기", payload: write_form });
         }}
+        className="register"
       >
         등록하기
       </button>
 
       <button
-        className="close write"
+        className="close"
         onClick={() => {
           let write_form = {
             write: write,

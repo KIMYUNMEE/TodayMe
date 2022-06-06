@@ -60,3 +60,21 @@
     color: #fff;
     margin-top: 40px;
 }
+
+@media screen and (max-width:560px) {
+    .profile_wrap .emotionList p {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .profile_wrap {
+        margin-bottom: 100px;
+    }
+
+    .profile_wrap .emotionList p img,
+    .profile_wrap .my_emotion img {
+        width: 70px;
+        height: 70px;
+    }
+
+}

@@ -23,7 +23,6 @@ function Footer(props) {
           </a>
         </li>
         <li>
-          {" "}
           {props.addToggle === false ? (
             <a
               href="#"
@@ -34,7 +33,6 @@ function Footer(props) {
             ></a>
           ) : null}
         </li>
-
         <li>
           <a
             href=""

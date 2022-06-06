@@ -69,3 +69,11 @@
     color: #3A4759;
     font-size: 15px;
 }
+
+@media screen and (max-width:380px) {
+
+    .profile_wrap {
+        margin-bottom: 22px;
+    }
+
+}

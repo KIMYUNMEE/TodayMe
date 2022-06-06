@@ -68,10 +68,10 @@ function App(props) {
               }`
         );
 
-        var difference = moment - start;
-        var oneDay = 1000 * 60 * 60 * 24;
-        var counte = Math.floor(difference / oneDay);
-        var countDay = counte;
+        let difference = moment - start;
+        let oneDay = 1000 * 60 * 60 * 24;
+        let counte = Math.floor(difference / oneDay);
+        let countDay = counte;
         setFirstDay(countDay);
       })}
       {useEffect(() => {
@@ -128,7 +128,7 @@ function App(props) {
             <div className="wrap">
               <Header />
               <section className="section01">
-                <div className="s1_wrap">
+                <div>
                   <div className="txt_wrap">
                     <p className="txt">오늘의 나는</p>
                     <p className="parcent">
@@ -182,7 +182,7 @@ function App(props) {
                 </div>
               </section>
               <section className="section02">
-                <div className="in_s2">
+                <div>
                   <div className="article">
                     <p>오늘 할일</p>
                     <div>
@@ -190,7 +190,7 @@ function App(props) {
                         공유하기
                       </button>
                       {reset === false ? (
-                        <p
+                        <span
                           className="reset"
                           onClick={() => {
                             setAddToggle(true);
@@ -198,7 +198,7 @@ function App(props) {
                           }}
                         >
                           작성완료
-                        </p>
+                        </span>
                       ) : (
                         <p
                           className="reset"
@@ -305,7 +305,7 @@ function App(props) {
                                   }}
                                 >
                                   <img
-                                    src="../favorite_FILL0_wght400_GRAD0_opsz48.png"
+                                    src="../btn_complete.png"
                                     alt="check"
                                   ></img>
                                 </button>

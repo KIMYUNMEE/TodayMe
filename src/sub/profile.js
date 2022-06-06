@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "../css/default.css";
 import "../css/profile.css";
+import "../css/index.css";
 
 function Profile(props) {
   let emotion_index = [1, 2, 3, 4, 5, 6];

@@ -14,13 +14,14 @@ function Notice(props) {
               props.dispatch({ type: "알림창닫기" });
               props.dispatch({ type: "알림아이콘끄기" });
             }}
+            alt="알림창 닫기"
           ></img>
         </div>
         <ul className="notice">
           {props.Time[0].defaultTime.map(function (a, i) {
             return (
               <li key={i}>
-                <img src="../check_circle_FILL0_wght400_GRAD0_opsz48.png"></img>
+                <img src="../ico_checked.png" alt="스케줄 완료 표시"></img>
                 <div>
                   <p className="notice_checktime">
                     {`${props.Time[0].defaultTime[i].year}-${

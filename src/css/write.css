@@ -1,41 +1,56 @@
-.editor {
+.write {
     margin: 0 auto;
     width: 70%;
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%);
-    background: #ffffff;
+    background: #fff;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
     padding: 45px;
     box-sizing: border-box;
 }
 
-.editor b {
+.text_area1_wrap {
+    margin-top: 20px;
+}
+
+.text_area1_wrap li {
+    float: left;
+    width: 25%;
+}
+
+.text_area1_wrap .text_area1 {
+    margin-left: 5px;
+    vertical-align: middle;
+
+}
+
+.write b {
     display: block;
     padding-bottom: 20px;
     text-align: center;
     color: #444;
 }
 
-.editor .text_area {
+.write .text_area {
     width: 100%;
     height: 45px;
 }
 
-.editor .date_wrap {
+.write .date_wrap {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-.editor .date {
+.write .date {
     display: flex;
     width: 100%;
     flex-direction: column;
 }
 
-.editor .day {
+.write .day {
     text-align: left;
     width: 100%;
     padding-top: 20px;
@@ -45,7 +60,7 @@
 
 }
 
-.editor .time_wrap {
+.write .time_wrap {
     display: flex;
     width: 100%;
     height: auto !important;
@@ -53,7 +68,7 @@
     justify-content: space-between;
 }
 
-.editor button {
+.write .register {
     width: 100%;
     height: 40px;
     line-height: 40px;
@@ -64,27 +79,86 @@
     color: #fff;
 }
 
-.editor .time_txt {
+.write .time_txt {
     margin-top: 10px;
     width: 50%;
-
     height: 35px;
     text-align: center;
     line-height: 35px;
 }
 
-.editor .time_txt:first-child {
+.write .time_txt:first-child {
     margin-right: 10px;
 }
 
-.close.write {
+.close {
     width: 80px;
     position: absolute;
     right: 45px;
-    top: 0;
+    top: 20px;
+    border-radius: 28px;
     height: 30px;
     line-height: 30px;
     color: #666;
     border: 1px solid #a88f71;
     background: none;
+}
+
+@media screen and (max-width:660px) {
+
+    .close {
+        width: 70px;
+        right: 17px;
+    }
+
+    .write {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .close {
+        right: 10px;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .close {
+        right: 10px;
+        width: 60px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .write b {
+        font-size: 12px;
+    }
+
+    .close {
+        width: 30px;
+        border-radius: 20px;
+        font-size: 10px;
+    }
+
+    .write .day {
+        padding-top: 15px;
+    }
+
+    .text_area1_wrap li {
+        font-size: 11px;
+    }
+
+    .write .day {
+        font-size: 13px;
+    }
+
+    .write .time_txt {
+        margin-top: 5px;
+        height: 30px;
+    }
+
+    .write .text_area {
+        height: 30px;
+    }
 }

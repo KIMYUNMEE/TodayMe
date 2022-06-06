@@ -50,61 +50,6 @@ code {
   display: inline-block;
 }
 
-.btnCall {
-  display: block;
-  width: 40px;
-  height: 27px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-/* header {
-  height: 80px;
-  line-height: 80px;
-} */
-
-.btnCall::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #000;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.btnCall::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #000;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.btnCall span {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #000;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -1px;
-  text-indent: -9999px;
-}
-
-
-
-.num {
-  font-size: 50px;
-  color: #333;
-}
-
 .txt_wrap {
   text-align: right;
   position: relative;
@@ -225,6 +170,7 @@ ul::after {
   justify-content: space-between;
   border-bottom: 1px solid #888;
   margin-bottom: 25px;
+  padding-bottom: 10px;
 
 }
 
@@ -233,11 +179,11 @@ img {
   height: 25px;
 }
 
-.article p {
+.article p,
+.article div {
   display: inline-block;
   font-size: 12px;
-  padding-bottom: 10px;
-
+  vertical-align: middle;
 }
 
 
@@ -261,21 +207,6 @@ button {
 .list li {
   float: left;
   width: 25%;
-}
-
-.text_area1_wrap {
-  margin-top: 20px;
-}
-
-.text_area1_wrap li {
-  float: left;
-  width: 25%;
-}
-
-.text_area1_wrap .text_area1 {
-  margin-left: 5px;
-  vertical-align: middle;
-
 }
 
 .list_tab li {
@@ -326,8 +257,6 @@ button {
   cursor: pointer;
 }
 
-
-
 .caption {
   font-size: 15.5px;
   color: #545454;
@@ -356,12 +285,8 @@ button {
   padding-left: 5px;
 }
 
-
-
-
 .share {
   font-size: 11px;
-  padding-bottom: 10px;
   padding-right: 10px;
   position: relative;
 }
@@ -388,7 +313,35 @@ button {
 
 @media screen and (max-width:1799px) {}
 
-@media screen and (max-width:1199px) {}
+@media screen and (max-width:1199px) {
+  .ico_img01 {
+    width: 350px;
+    height: 350px;
+    top: 38px;
+    left: 0;
+
+  }
+
+  .txt_wrap {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width:830px) {
+  .ico_img01 {
+    top: 44px;
+    left: 0;
+  }
+
+  .txt_wrap {
+    margin-top: 112px;
+  }
+
+  .txt,
+  .parcent {
+    display: block;
+  }
+}
 
 
 @media screen and (max-width:660px) {
@@ -399,7 +352,7 @@ button {
   }
 
   .txt_wrap {
-    margin-top: 40px;
+    margin-top: 70px;
   }
 
   .article {
@@ -407,7 +360,23 @@ button {
   }
 
   .ico_img01 {
-    top: 14%;
+    width: 250px;
+    height: 250px;
+  }
+
+  .close {
+    width: 70px;
+    right: 17px;
+  }
+
+  .write {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width:640px) {
+  .close {
+    right: 10px;
   }
 }
 
@@ -420,15 +389,11 @@ button {
 
 @media screen and (max-width:525px) {
   .ico_img01 {
-    width: 180px;
-    height: 180px;
+    width: 190px;
+    height: 190px;
     top: 12%;
     left: 0%;
 
-  }
-
-  footer {
-    position: static;
   }
 
   .todo {
@@ -436,7 +401,37 @@ button {
   }
 }
 
+@media screen and (max-width:380px) {
+  .txt_wrap .txt {
+    font-size: 15px;
+    padding-right: 0;
+  }
 
+  .parcent {
+    font-size: 50px;
+  }
+
+  .caption {
+    font-size: 12px;
+  }
+
+  .ico_img01 {
+    width: 160px;
+    height: 160px;
+    top: 10%;
+  }
+
+  .list li {
+    font-size: 12px;
+  }
+
+  .use_day .member_caption {
+    padding-left: 0;
+    font-size: 11px;
+
+  }
+
+}
 
 
 .date_txt {

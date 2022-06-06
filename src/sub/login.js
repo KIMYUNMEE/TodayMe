@@ -6,14 +6,14 @@ import "../css/login.css";
 import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 
-function AskForm(props) {
+function LoginForm(props) {
   let history = useHistory();
   useEffect(() => {
     const user_name = "currentUser";
-    const form = document.querySelector(".form"),
-      input = form.querySelector("input");
+    const input_box = document.querySelector(".input_text");
+    let input = input_box.querySelector("input");
     function askName() {
-      form.addEventListener("submit", goSubmit);
+      input_box.addEventListener("submit", goSubmit);
     }
     function saveName(text) {
       localStorage.setItem(user_name, text);
@@ -57,7 +57,7 @@ function AskForm(props) {
   });
   return (
     <div className="box_wrap">
-      <form className="form">
+      <form className="input_text">
         <input type="text" placeholder="사용 할 닉네임을 적어주세요." />
         <p className="reset">
           ( 새롭게 로그인하는 경우 1일부터 다시 시작됩니다! )
@@ -74,4 +74,4 @@ function store05(state) {
   };
 }
 
-export default connect(store05)(AskForm);
+export default connect(store05)(LoginForm);
