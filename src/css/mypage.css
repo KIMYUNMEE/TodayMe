@@ -76,4 +76,13 @@
         margin-bottom: 22px;
     }
 
+    .mypage .mypage_wrap01 figure img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .mypage .mypage_wrap01 p,
+    .mypage .mypage_wrap01 h3 {
+        font-size: 20px;
+    }
 }
