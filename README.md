@@ -109,24 +109,35 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ![기록하기02](https://user-images.githubusercontent.com/75771515/172307488-90b54587-38ba-4433-a1b0-f0d645b4a920.png)
 
 ### 메뉴 버튼을 누르면
-![마이페이지](https://user-images.githubusercontent.com/75771515/172311331-ebc5bc49-ecf9-44fb-9215-897ede12159c.png)
+![메뉴버튼](https://user-images.githubusercontent.com/75771515/172311611-02d7e188-8a66-4b61-9e13-29676fba147d.png)
+
 
 ### 서브페이지인 마이페이지로 이동
-![마이페이지02](https://user-images.githubusercontent.com/75771515/172311342-ab1c50fc-90e6-4aab-8127-126650704d07.png)
+![마이페이지](https://user-images.githubusercontent.com/75771515/172311331-ebc5bc49-ecf9-44fb-9215-897ede12159c.png)
+
 
 
 ### 감정변경하기페이지에서 나의 하루에 해당하는 감정을 누르고 바꾸기를 누르면 마이페이지의 감정이 변화됨
+![마이페이지02](https://user-images.githubusercontent.com/75771515/172311342-ab1c50fc-90e6-4aab-8127-126650704d07.png)
 ![마이페이지03](https://user-images.githubusercontent.com/75771515/172311362-66e2ae9e-3829-467d-8fe7-034d50dd9e08.png)
+![마이페이지04](https://user-images.githubusercontent.com/75771515/172311730-3c555c17-19e2-4a65-a1d9-377bc464d0d5.png)
 
 
 
 
-### 나의 하루의 할일을 100% 연속 완료 했을 시 마다 나의 나무가 자람
+### 나의 하루의 할일을 100% 연속 완료 했을 시 마다 나의 나무가 자라는데 오늘의 달성나무는?을 누르면 나무별로 달성해야할 횟수를 알 수 있음 (애기나무 , 어린이나무 , 청소년나무, 어른나무)
+![마이페이지07](https://user-images.githubusercontent.com/75771515/172311849-8c516baa-b201-440e-87a3-ad0d91e7bf78.png)
+![마이페이지06](https://user-images.githubusercontent.com/75771515/172311871-2af13e87-fb3d-471f-b2a0-e875f4f35f4a.png)
+
 
 ### 닉네임 변경하기를 누르면 나의 닉네임을 바꿀 수 있고 실시간으로 적용이 됨
 
+![마이페이지08](https://user-images.githubusercontent.com/75771515/172312307-c98f16dc-7243-4bb0-b5e9-07146e5db0d5.png)
 
+![마이페이지09](https://user-images.githubusercontent.com/75771515/172312309-41b6eb9f-95ab-40fd-a2e9-a188b857a72e.png)
 
+![마이페이지10](https://user-images.githubusercontent.com/75771515/172312327-41f9202e-2f2e-4ac7-853a-a0acfc544631.png)
+![마이페이지11](https://user-images.githubusercontent.com/75771515/172312340-d5d134a2-aa49-4f8c-bf9c-9a569e39a02a.png)
 
 
 ## 필수기능
