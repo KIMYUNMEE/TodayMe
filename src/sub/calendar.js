@@ -94,7 +94,7 @@ function Calendar12(props) {
                 props.dispatch({ type: "디데이전송", payload8: click_date });
                 props.dispatch({
                   type: "예약일정내용전송02",
-                  payload10: click_date,
+                  payload10: todo_text,
                 });
                 todo_text === ""
                   ? alert("내용을입력하세요")

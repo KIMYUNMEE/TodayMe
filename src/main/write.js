@@ -56,6 +56,7 @@ function Writeform(props) {
               placeholder="중요도"
               type="radio"
               value="제일😍"
+              name="emotion"
               onChange={(e) => {
                 setIwrite(e.target.value);
               }}
@@ -69,6 +70,7 @@ function Writeform(props) {
               placeholder="중요도"
               type="radio"
               value="많이😊"
+              name="emotion"
               onChange={(e) => {
                 setIwrite(e.target.value);
               }}
@@ -82,6 +84,7 @@ function Writeform(props) {
               placeholder="중요도"
               type="radio"
               value="적게🤔"
+              name="emotion"
               onChange={(e) => {
                 setIwrite(e.target.value);
               }}
@@ -95,6 +98,7 @@ function Writeform(props) {
               placeholder="중요도"
               type="radio"
               value="없음🤢"
+              name="emotion"
               onChange={(e) => {
                 setIwrite(e.target.value);
               }}
