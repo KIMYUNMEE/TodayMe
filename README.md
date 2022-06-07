@@ -73,11 +73,17 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ![할일쓰기창05](https://user-images.githubusercontent.com/75771515/172301742-8a9ce1ec-0c41-4b86-810f-d366628e3974.png)
 ![알림창](https://user-images.githubusercontent.com/75771515/172302395-0eaa2458-a437-4930-96fa-7d011d5b7fab.png)
 
-### 할일을 다 작성했을 시 작성완료를 누르면
+### 할일을 다 작성했을 시 작성완료를 누르면 
 
 ![작성완료](https://user-images.githubusercontent.com/75771515/172303286-699da174-1de3-4b3e-90db-8b37764c8799.png)
-
+### 초기화하기 버튼으로 바뀌고 할일쓰기아이콘 사라짐
 ![작성완료02](https://user-images.githubusercontent.com/75771515/172303292-676d0895-944a-4693-8d2b-73969168f551.png)
+
+### 초기화 버튼을 누르면 로딩창이 보이고 메인이미지, %, 할일쓰기 목록이 초기화
+![초기화](https://user-images.githubusercontent.com/75771515/172303690-37473190-c551-4fe8-9f0b-f1010f1239e6.png)
+
+![초기화 후 메인화면](https://user-images.githubusercontent.com/75771515/172304131-36980384-c674-4e6d-ac9a-d631a1591b8b.png)
+
 
 ## 필수기능
 ### 1. 나만의 닉네임 등록으로 로그인하기
