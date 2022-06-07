@@ -209,12 +209,14 @@ ercontent.com/75771515/172325728-977c1430-c355-4ce7-a48e-82798ed05c53.png)
 1. localStorage에서는 문자열만 받를 수 있어서 ranking+1하면 ranking이 문자열이 되어서 문자열 더하기 숫자 하면 문자열이라 5다음에 6이 아니라 51이 됩니다
     
     문제해결: 그래서 ranking을 Number화  => ? setRanking(Number(ranking) + 1)
-    ![image](https://user-images.githubusercontent.com/75771515/172337930-5bd6a160-d5f0-47c2-8b1a-bf55cb619c9b.png)
-    
+
+    ![문제해결2](https://user-images.githubusercontent.com/75771515/172398431-ce0de57f-d7ac-4b6c-b585-e7d486107cbf.png)
+
 2. calandar.js에서 캘린더의 날짜를 선택한 뒤 현재날짜인 오늘과 얼마나 남았는지 구현하는 도중 
    TimeResult가 0보다 작으면 즉, 선택한 날짜가 현재 날짜보다 이전이면 D+가 나와야하는데 D+-가 나오는 문제발생
+   
    문제해결: replace()함수를 이용해서 -를 "" 즉, 빈 문자열로 대체해서 해결했습니다. = replace("+", "")
-![image](https://user-images.githubusercontent.com/75771515/172397089-f304453c-440e-485f-bb06-5632ad723fc5.png)
+![문제해결](https://user-images.githubusercontent.com/75771515/172398091-2d202cb3-2d43-483c-ad0f-f1e7829517bb.png)
 
 
  
