@@ -55,7 +55,7 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ### 완료아이콘을 누르면
 ![할일쓰기창04](https://user-images.githubusercontent.com/75771515/172299961-03069141-a0e9-4c70-8d25-47133a4a7df6.png)
 
-### 메인이미지변경, % 상승 , 알림 변화
+### 메인이미지변경, % 상승 , 알림 변화(완료할때마다)
 ![할일쓰기창05](https://user-images.githubusercontent.com/75771515/172300093-8cd2de6f-99dc-4be5-8764-7655f3ef1757.png)
 
 ### %가 오를 때 마다 이미지 변경 (~100%)
@@ -68,10 +68,16 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ![100](https://user-images.githubusercontent.com/75771515/172301521-999e1b94-8a28-4cf4-8537-9ba79673a221.png)
 
 
+### 알림버튼을 누르면 내가 완료한 목록들과 완료한 시간이 표시됨 
 
+![할일쓰기창05](https://user-images.githubusercontent.com/75771515/172301742-8a9ce1ec-0c41-4b86-810f-d366628e3974.png)
+![알림창](https://user-images.githubusercontent.com/75771515/172302395-0eaa2458-a437-4930-96fa-7d011d5b7fab.png)
 
+### 할일을 다 작성했을 시 작성완료를 누르면
 
+![작성완료](https://user-images.githubusercontent.com/75771515/172303286-699da174-1de3-4b3e-90db-8b37764c8799.png)
 
+![작성완료02](https://user-images.githubusercontent.com/75771515/172303292-676d0895-944a-4693-8d2b-73969168f551.png)
 
 ## 필수기능
 ### 1. 나만의 닉네임 등록으로 로그인하기
