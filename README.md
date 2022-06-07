@@ -45,6 +45,20 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ### 할일쓰기창이 보여짐
 ![할일적기창](https://user-images.githubusercontent.com/75771515/172298507-a99f3664-08a1-403c-8b2c-dc2ec8ed8ab5.PNG)
 
+### 내가 해야할 일과 시간 얼마나 중요한지를 작성하고 등록을 누르면
+
+![할일쓰기창02](https://user-images.githubusercontent.com/75771515/172299033-6433ddc6-592f-4bdd-b86f-d3bf525559c2.png)
+
+### 메인화면에 자동으로 등록됨
+![할일쓰기창03](https://user-images.githubusercontent.com/75771515/172299297-13ea82bc-4ac3-4318-8d06-d0662a9e8f4a.png)
+
+### 완료아이콘을 누르면
+![할일쓰기창04](https://user-images.githubusercontent.com/75771515/172299961-03069141-a0e9-4c70-8d25-47133a4a7df6.png)
+
+### 메인이미지변경, % 상승 , 알림 변화
+![할일쓰기창05](https://user-images.githubusercontent.com/75771515/172300093-8cd2de6f-99dc-4be5-8764-7655f3ef1757.png)
+
+
 
 ## 필수기능
 ### 1. 나만의 닉네임 등록으로 로그인하기
