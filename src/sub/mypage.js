@@ -43,14 +43,11 @@ function MyPage(props) {
               입니다.
             </p>
           </div>
-          <figure className="profile_img">
-            <img
-              src={`../emotion${
-                emotionCheck === null ? 1 : emotionCheck[0]
-              }.png`}
-              alt=""
-            ></img>
-          </figure>
+
+          <img
+            src={`../emotion${emotionCheck === null ? 1 : emotionCheck[0]}.png`}
+            alt=""
+          ></img>
         </section>
         <section className="mypage_wrap02">
           <ul className="tab_menu">

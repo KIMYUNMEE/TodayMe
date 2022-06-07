@@ -15,13 +15,11 @@
     align-items: center;
 }
 
-.mypage .mypage_wrap01 figure {
-    cursor: pointer;
-}
 
-.mypage .mypage_wrap01 figure img {
+.mypage .mypage_wrap01 img {
     width: 100px;
     height: 100px;
+    cursor: pointer;
     margin-bottom: 25px;
 }
 
@@ -79,10 +77,15 @@
     .mypage .mypage_wrap01 figure img {
         width: 70px;
         height: 70px;
+        margin-bottom: 0;
     }
 
     .mypage .mypage_wrap01 p,
     .mypage .mypage_wrap01 h3 {
         font-size: 20px;
+    }
+
+    .mypage_wrap02 .tab_menu li {
+        padding: 0 0 0 10px;
     }
 }

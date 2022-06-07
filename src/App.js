@@ -200,7 +200,7 @@ function App(props) {
                           작성완료
                         </span>
                       ) : (
-                        <p
+                        <span
                           className="reset"
                           onClick={() => {
                             localStorage.removeItem("data");
@@ -211,7 +211,7 @@ function App(props) {
                           }}
                         >
                           초기화하기
-                        </p>
+                        </span>
                       )}
                     </div>
                   </div>

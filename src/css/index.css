@@ -240,11 +240,6 @@ button {
   margin-top: 20px;
 }
 
-.header_nav {
-  position: absolute;
-  left: 0;
-  top: 20px;
-}
 
 .title_header h1 {
   color: #333;
