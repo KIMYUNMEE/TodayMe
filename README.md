@@ -172,7 +172,17 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 
 
 ### `3. '나의 하루'에 동륵한 일 초기화하기`
+![리셋](https://user-images.githubusercontent.com/75771515/172325790-226860ee-7f2e-464d-97fb-5b3f082c2cc9.png)
+
+![리셋2](https://user-images.githubusercontent.com/75771515/172325738-88f0c75a-8e69-4987-b86e-3456f83a563d.png)
+ercontent.com/75771515/172325728-977c1430-c355-4ce7-a48e-82798ed05c53.png)
+
 ### `3. '나의 하루'에 등록한 해야할 일을 완료했을 시 알림으로 보여지기`
+![알림](https://user-images.githubusercontent.com/75771515/172328324-a729faf6-47ce-48ac-a1d8-4e53e78b8bfe.png)
+![알림1](https://user-images.githubusercontent.com/75771515/172328341-9b69da36-c77c-4236-abe6-1d966c0339e8.png)
+![알림2](https://user-images.githubusercontent.com/75771515/172328363-699378ac-69bc-44b2-b1c1-8dab3b637133.png)
+
+
 ### `4. 미리 등록하고싶은 예약일정을 나의 달력에 기록하기`
 
 ## 추가기능
