@@ -58,6 +58,19 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ### 메인이미지변경, % 상승 , 알림 변화
 ![할일쓰기창05](https://user-images.githubusercontent.com/75771515/172300093-8cd2de6f-99dc-4be5-8764-7655f3ef1757.png)
 
+### %가 오를 때 마다 이미지 변경 (~100%)
+
+
+
+![50%](https://user-images.githubusercontent.com/75771515/172301511-35851a7a-caee-48ed-bd8f-eb46ae65f35e.png)
+
+![75](https://user-images.githubusercontent.com/75771515/172301514-c157319d-fc4d-4da9-95b2-6617758b0ba8.png)
+![100](https://user-images.githubusercontent.com/75771515/172301521-999e1b94-8a28-4cf4-8537-9ba79673a221.png)
+
+
+
+
+
 
 
 ## 필수기능
