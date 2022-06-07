@@ -147,17 +147,18 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ![로그인2](https://user-images.githubusercontent.com/75771515/172316020-7c8cb96c-2873-4868-b91b-2f8fc4bfaaf1.png)
 
 ![로그인3](https://user-images.githubusercontent.com/75771515/172317293-3afc0638-2bc4-4da1-8ba5-6bab6f86d6b1.png)
+![로그인4](https://user-images.githubusercontent.com/75771515/172317504-0085910a-126d-4e38-aac7-baaa476ed2d8.png)
 
 ### 1-2. 나만의 닉네임 변경하기
 
 
 ### `2. 하루하루 감정 변경하기`
+![감정1](https://user-images.githubusercontent.com/75771515/172318813-f05af8e3-260f-4d13-bf4d-8a209bf2f997.png)
+![감정2](https://user-images.githubusercontent.com/75771515/172318831-e23ed317-720e-4bfd-9891-187439f2995c.png)
 
 
 ### `3. '나의 하루'에 해야할 일 적기`
 
-
-### `3. '나의 하루'에 해야할 일 적기`
 
 ### `3-1. '나의 하루' 공유하기`
 ### `3. '나의 하루'에 동륵한 일 초기화하기`
