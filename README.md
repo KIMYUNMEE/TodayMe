@@ -12,6 +12,12 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 
 그렇게 저는 Todo(CRUD)를 기반인 '오늘의 나'라는 사이트를 제작하게 되었습니다.
 
+## 화면 구성
+![로그인화면](https://user-images.githubusercontent.com/75771515/172297227-0946acf8-20ca-437c-9d67-8063fcfcdfdf.png)
+
+![메인화면](https://user-images.githubusercontent.com/75771515/172296970-1317bc2e-e132-419f-926f-7ac5447fa4e7.png)
+
+
 ## 필수기능
 ### 1. 나만의 닉네임 등록으로 로그인하기
 
@@ -38,7 +44,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `3. '나의 하루'에 해야할 일 적기`
 
-![메인화면](https://user-images.githubusercontent.com/75771515/172296970-1317bc2e-e132-419f-926f-7ac5447fa4e7.png)
+
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
