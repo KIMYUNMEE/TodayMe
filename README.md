@@ -38,6 +38,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `3. '나의 하루'에 해야할 일 적기`
 
+![메인화면](https://user-images.githubusercontent.com/75771515/172296970-1317bc2e-e132-419f-926f-7ac5447fa4e7.png)
+
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
