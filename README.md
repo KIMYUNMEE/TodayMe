@@ -184,6 +184,10 @@ ercontent.com/75771515/172325728-977c1430-c355-4ce7-a48e-82798ed05c53.png)
 
 
 ### `4. 미리 등록하고싶은 예약일정을 나의 달력에 기록하기`
+![캘린더1](https://user-images.githubusercontent.com/75771515/172332553-10b039df-0f38-480d-8954-c2b8b70784ed.png)
+![캘린더2](https://user-images.githubusercontent.com/75771515/172332563-2d55eed2-f641-472f-85d5-343d6f2f58da.png)
+![캘린더3](https://user-images.githubusercontent.com/75771515/172332577-9495de90-43af-488e-8fcb-365054e7531a.png)
+
 
 ## 추가기능
 
