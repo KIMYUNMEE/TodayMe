@@ -207,7 +207,8 @@ ercontent.com/75771515/172325728-977c1430-c355-4ce7-a48e-82798ed05c53.png)
 ## 오류해결
 
 1. localStorage에서는 문자열만 받를 수 있어서 ranking+1하면 ranking이 문자열이 되어서 문자열 더하기 숫자 하면 문자열이라 5다음에 6이 아니라 51이 됩니다
-    문제해결: 그래서 ranking을 Number화 하기 =>  ? setRanking(Number(ranking) + 1)
+    
+    문제해결: 그래서 ranking을 Number화  => ? setRanking(Number(ranking) + 1)
     ![image](https://user-images.githubusercontent.com/75771515/172337930-5bd6a160-d5f0-47c2-8b1a-bf55cb619c9b.png)
 
  
