@@ -90,8 +90,9 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ![기록하기](https://user-images.githubusercontent.com/75771515/172306698-c83bbe67-c8d4-41d3-ba3b-57d1065ebe17.png)
 
 ### 기록하기 서브페이지가 보여짐
+![기록하기02](https://user-images.githubusercontent.com/75771515/172307477-a5cc063b-9f34-45c5-b684-2fabdcfc2262.png)
 
-![기록하기02](https://user-images.githubusercontent.com/75771515/172306785-3b336bbf-17c7-4c07-90db-a31c39dcb9d9.png)
+
 
 ### 미리&이전에 기록하고 싶은 일정이 있을 때 입력하고 작성하기를 누르면
 ![기록하기03](https://user-images.githubusercontent.com/75771515/172306898-6987864f-76ab-4381-819c-710cec9a06f1.png)
@@ -105,6 +106,7 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ![기록하기05](https://user-images.githubusercontent.com/75771515/172307056-f5ed1aa6-03fd-4513-89f8-e5c9734f28e7.png)
 
 ### 다시 기록하기으로 넘어가면 초기화 된걸 확인 할 수 있음
+![기록하기02](https://user-images.githubusercontent.com/75771515/172307488-90b54587-38ba-4433-a1b0-f0d645b4a920.png)
 
 
 ## 필수기능
