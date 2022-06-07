@@ -83,6 +83,12 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ![초기화](https://user-images.githubusercontent.com/75771515/172303690-37473190-c551-4fe8-9f0b-f1010f1239e6.png)
 
 ![초기화 후 메인화면](https://user-images.githubusercontent.com/75771515/172304131-36980384-c674-4e6d-ac9a-d631a1591b8b.png)
+ 
+ 
+ ### 공유하기 버튼을 누르면 나의 링크를 공유가능 
+ ![공유하기](https://user-images.githubusercontent.com/75771515/172332898-41f17297-f203-4bc4-b01c-d0117b353e7c.png)
+![공유하기2](https://user-images.githubusercontent.com/75771515/172332911-7db0e95e-75a9-472c-aded-ffb8dce94d38.png)
+![공유하기3](https://user-images.githubusercontent.com/75771515/172332926-105a29b0-a18f-488f-9344-24e5954dbd06.png)
 
 
 ### 기록하기를 누르면 
