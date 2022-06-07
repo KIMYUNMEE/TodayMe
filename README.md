@@ -47,7 +47,7 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 
 ### 내가 해야할 일과 시간 얼마나 중요한지를 작성하고 등록을 누르면
 
-![할일쓰기창02](https://user-images.githubusercontent.com/75771515/172299033-6433ddc6-592f-4bdd-b86f-d3bf525559c2.png)
+![할일쓰기창02](https://user-images.githubusercontent.com/75771515/172300379-f89e3467-733f-4479-a6b7-3e6fcd936832.png)
 
 ### 메인화면에 자동으로 등록됨
 ![할일쓰기창03](https://user-images.githubusercontent.com/75771515/172299297-13ea82bc-4ac3-4318-8d06-d0662a9e8f4a.png)
