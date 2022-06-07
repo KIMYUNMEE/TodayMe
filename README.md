@@ -85,6 +85,28 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ![초기화 후 메인화면](https://user-images.githubusercontent.com/75771515/172304131-36980384-c674-4e6d-ac9a-d631a1591b8b.png)
 
 
+### 기록하기를 누르면 
+
+![기록하기](https://user-images.githubusercontent.com/75771515/172306698-c83bbe67-c8d4-41d3-ba3b-57d1065ebe17.png)
+
+### 기록하기 서브페이지가 보여짐
+
+![기록하기02](https://user-images.githubusercontent.com/75771515/172306785-3b336bbf-17c7-4c07-90db-a31c39dcb9d9.png)
+
+### 미리&이전에 기록하고 싶은 일정이 있을 때 입력하고 작성하기를 누르면
+![기록하기03](https://user-images.githubusercontent.com/75771515/172306898-6987864f-76ab-4381-819c-710cec9a06f1.png)
+
+### 예약하고 싶은 일정에 뜸
+![기록하기04](https://user-images.githubusercontent.com/75771515/172306944-498a2d2a-bab1-4530-8cd7-02bd33c35587.png)
+
+
+### 초기화 버튼을 누르면 locaclStorage에 저장되어 있던 내용들이 없어지고 이전 history로 이동됨
+
+![기록하기05](https://user-images.githubusercontent.com/75771515/172307056-f5ed1aa6-03fd-4513-89f8-e5c9734f28e7.png)
+
+### 다시 기록하기으로 넘어가면 초기화 된걸 확인 할 수 있음
+
+
 ## 필수기능
 ### 1. 나만의 닉네임 등록으로 로그인하기
 
