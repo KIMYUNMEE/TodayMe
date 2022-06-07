@@ -91,7 +91,7 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ![공유하기3](https://user-images.githubusercontent.com/75771515/172332926-105a29b0-a18f-488f-9344-24e5954dbd06.png)
 
 
-### 기록하기를 누르면 
+### 기록하기 서브페이지를 클릭하면
 
 ![기록하기](https://user-images.githubusercontent.com/75771515/172306698-c83bbe67-c8d4-41d3-ba3b-57d1065ebe17.png)
 
