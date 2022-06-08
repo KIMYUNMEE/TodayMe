@@ -8,7 +8,7 @@ import "./App.css";
 
 import Header from "./common/header";
 import Mypage from "./sub/mypage";
-import AskForm from "./sub/login";
+import LoginForm from "./sub/login";
 import Calendar from "./sub/calendar";
 import Loading from "./sub/loading";
 import Write from "./main/write";
@@ -122,7 +122,7 @@ function App(props) {
         {loadingState === false && props.reducer6[0].update === false ? (
           <Loading></Loading>
         ) : currentUser === null ? (
-          <AskForm></AskForm>
+          <LoginForm></LoginForm>
         ) : (
           <div>
             <div className="wrap">
@@ -139,37 +139,37 @@ function App(props) {
                   {parcent === 0 ? (
                     <img
                       src="../main_img01.jpg"
-                      alt="준비"
+                      alt="메인이미지01"
                       className="ico_img01"
                     ></img>
                   ) : parcent === 25 ? (
                     <img
                       src="../main_img02.jpg"
-                      alt="하는중"
+                      alt="메인이미지02"
                       className="ico_img01"
                     ></img>
                   ) : parcent === 50 ? (
                     <img
                       src="../main_img03.jpg"
-                      alt="하는중"
+                      alt="메인이미지03"
                       className="ico_img01"
                     ></img>
                   ) : parcent === 75 ? (
                     <img
                       src="../main_img04.jpg"
-                      alt="하는중"
+                      alt="메인이미지04"
                       className="ico_img01"
                     ></img>
                   ) : parcent === 100 ? (
                     <img
                       src="../main_img05.jpg"
-                      alt="하는중"
+                      alt="메인이미지05"
                       className="ico_img01"
                     ></img>
                   ) : (
                     <img
                       src="../main_img01.jpg"
-                      alt="하는중"
+                      alt="메인이미지01"
                       className="ico_img01"
                     ></img>
                   )}
@@ -328,7 +328,7 @@ function App(props) {
         )}
       </Route>
       <Route exact path="/login">
-        <AskForm></AskForm>
+        <LoginForm></LoginForm>
       </Route>
       <Route exact path="/calendar">
         <Calendar></Calendar>
