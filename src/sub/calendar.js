@@ -15,6 +15,10 @@ import Footer from "../common/footer";
 function Calendar12(props) {
   const [value, onChange] = useState(new Date());
   let history = useHistory();
+  const [value1, onChange1] = useState(
+    localStorage.getItem(props.state2[0].daytxt)
+  );
+  console.log(value1);
   const upDate = localStorage.getItem(props.state[0].dayName);
   const upgradDate = JSON.parse(upDate);
   const upTxt = localStorage.getItem(props.state2[0].daytxt);
@@ -26,7 +30,7 @@ function Calendar12(props) {
   let box = new Array();
   upDate === null
     ? console.log("실패")
-    : upgradDate.map(function (a, i) {
+    : upgradDate.map((a) => {
         box.push(new Date(a));
       });
   let gap = box.map(function (time, indexs) {
@@ -35,7 +39,9 @@ function Calendar12(props) {
   let TimeResult = gap.map(function (dated, indexed) {
     return Math.ceil(gap[indexed] / (1000 * 60 * 60 * 24));
   });
-
+  const deletePost = (index) => {
+    onChange1(value1.filter((_, postIndex) => postIndex !== index));
+  };
   return (
     <div>
       <header>
@@ -62,7 +68,7 @@ function Calendar12(props) {
                 return (
                   <div className="date_wrap" key={i}>
                     {html}
-                    <p>{upgradday[i]}</p>
+                    <p>{upgradDate[i]}</p>
                     <p className="date_txt">
                       <p>{upgradTxt[i]}</p>
                     </p>

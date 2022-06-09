@@ -154,7 +154,15 @@ function reducer9(state = countDay, action9) {
     let copy10 = [...countDay];
     copy10[0].dayText.push(action9.payload9);
     console.log(copy10[0].dayText);
+
     localStorage.setItem(copy10[0].daytxt, JSON.stringify(copy10[0].dayText));
+
+    return copy10;
+  } else if (action9.type === "삭제") {
+    let copy10 = [...countDay];
+    copy10[0].day.pop(action9.payload111);
+    console.log(copy10[0].day);
+    localStorage.setItem(copy10[0].day2, JSON.stringify(copy10[0].day));
     return copy10;
   } else {
     return state;
@@ -166,6 +174,12 @@ function reducer10(state = countDay, action10) {
     copy11[0].day.push(action10.payload10);
     console.log(copy11[0].day);
     localStorage.setItem(copy11[0].day2, JSON.stringify(copy11[0].day));
+    return copy11;
+  } else if (action10.type === "삭제") {
+    let copy11 = [...countDay];
+    copy11[0].day.pop(action10.payload111);
+    console.log(copy11[0].day);
+    localStorage.setItem(copy11[0].day2, "");
     return copy11;
   } else {
     return state;

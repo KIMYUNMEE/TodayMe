@@ -75,6 +75,27 @@
     border-radius: 50%;
 }
 
+.u_name {
+    position: relative;
+    padding: 0 20px;
+    width: 200px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.u_name::before {
+    content: "";
+    left: 0;
+    clear: both;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    background-color: #f87171;
+    border-radius: 50%;
+}
+
 .react-calendar {
     width: 100%;
 }

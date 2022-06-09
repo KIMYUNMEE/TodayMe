@@ -253,7 +253,7 @@ function App(props) {
                                     var hour = nowTime.getHours();
                                     var min = nowTime.getMinutes();
 
-                                    let DateFac = {
+                                    let ymdInfo = {
                                       year: year,
                                       mon: mon,
                                       date: date,
@@ -268,10 +268,7 @@ function App(props) {
                                       parcent_name,
                                       parcent + 25
                                     );
-                                    props.dispatch({
-                                      type: "날짜전송",
-                                      payload2: DateFac,
-                                    });
+
                                     props.dispatch({ type: "알림아이콘보기" });
                                     props.dispatch({
                                       type: "텍스트보내기",
@@ -283,7 +280,10 @@ function App(props) {
                                       : setRanking(Number(ranking));
 
                                     localStorage.setItem(rank, ranking);
-
+                                    props.dispatch({
+                                      type: "날짜전송",
+                                      payload2: ymdInfo,
+                                    });
                                     const finded = document.querySelectorAll(
                                       ".section02 .list button"
                                     );
