@@ -16,7 +16,6 @@ let basic = [
     saveData: "data",
   },
 ];
-
 let toggle = [
   {
     noticeToggle: false,
@@ -26,21 +25,24 @@ let toggle = [
     loginToggle: false,
   },
 ];
-
 let todoTime = [
   {
     defaultTime: [],
     checkText: [],
   },
 ];
-
 let emotion = [
   {
     profileEmotion: "id",
     emotionValue: ["1"],
   },
 ];
-
+let emotion1 = [
+  {
+    profileEmotion: "id1",
+    emotionValue: ["1"],
+  },
+];
 let countDay = [
   {
     day: [],
@@ -51,7 +53,6 @@ let countDay = [
     dayName: "date",
   },
 ];
-
 function reducer(state = basic, action) {
   if (action.type === "할일쓰기창열기") {
     let copy = [...basic];
@@ -70,7 +71,6 @@ function reducer(state = basic, action) {
     return state;
   }
 }
-
 function reducer2(state = toggle, action2) {
   if (action2.type === "알림창열기") {
     let copy3 = [...toggle];
@@ -84,7 +84,6 @@ function reducer2(state = toggle, action2) {
     return state;
   }
 }
-
 function reducer3(state = todoTime, action3) {
   if (action3.type === "날짜전송") {
     let copy5 = [...todoTime];
@@ -94,7 +93,6 @@ function reducer3(state = todoTime, action3) {
     return state;
   }
 }
-
 function reducer4(state = toggle, action4) {
   if (action4.type === "알림아이콘보기") {
     let copy6 = [...toggle];
@@ -108,7 +106,6 @@ function reducer4(state = toggle, action4) {
     return state;
   }
 }
-
 function reducer5(state = todoTime, action5) {
   if (action5.type === "텍스트보내기") {
     let copy7 = [...todoTime];
@@ -128,7 +125,6 @@ function reducer6(state = basic, action6) {
     return state;
   }
 }
-
 function reducer7(state = toggle, action7) {
   if (action7.type === "로그인성공") {
     let copy8 = [...toggle];
@@ -154,15 +150,7 @@ function reducer9(state = countDay, action9) {
     let copy10 = [...countDay];
     copy10[0].dayText.push(action9.payload9);
     console.log(copy10[0].dayText);
-
     localStorage.setItem(copy10[0].daytxt, JSON.stringify(copy10[0].dayText));
-
-    return copy10;
-  } else if (action9.type === "삭제") {
-    let copy10 = [...countDay];
-    copy10[0].day.pop(action9.payload111);
-    console.log(copy10[0].day);
-    localStorage.setItem(copy10[0].day2, JSON.stringify(copy10[0].day));
     return copy10;
   } else {
     return state;
@@ -175,17 +163,10 @@ function reducer10(state = countDay, action10) {
     console.log(copy11[0].day);
     localStorage.setItem(copy11[0].day2, JSON.stringify(copy11[0].day));
     return copy11;
-  } else if (action10.type === "삭제") {
-    let copy11 = [...countDay];
-    copy11[0].day.pop(action10.payload111);
-    console.log(copy11[0].day);
-    localStorage.setItem(copy11[0].day2, "");
-    return copy11;
   } else {
     return state;
   }
 }
-
 function reducer11(state = toggle, action11) {
   if (action11.type === "내등급열기") {
     let copy12 = [...toggle];
@@ -199,7 +180,6 @@ function reducer11(state = toggle, action11) {
     return state;
   }
 }
-
 function reducer12(state = emotion, action12) {
   if (action12.type === "id값전송") {
     let copy13 = [...emotion];
@@ -210,7 +190,16 @@ function reducer12(state = emotion, action12) {
     return state;
   }
 }
-
+function reducer13(state = emotion1, action13) {
+  if (action13.type === "id값전송") {
+    let copy14 = [...emotion1];
+    copy14[0].emotionValue.unshift(action13.payload13);
+    localStorage.setItem(copy14[0].profileEmotion, copy14[0].emotionValue);
+    return copy14;
+  } else {
+    return state;
+  }
+}
 let store = createStore(
   combineReducers({
     reducer,
@@ -225,6 +214,7 @@ let store = createStore(
     reducer10,
     reducer11,
     reducer12,
+    reducer13,
   })
 );
 const rootNode = document.getElementById("root");

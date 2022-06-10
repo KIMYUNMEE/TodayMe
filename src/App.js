@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Route, Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { useScript } from "./main/hook";
@@ -52,12 +52,292 @@ function App(props) {
   const upParcent = +localStorage.getItem(parcent_name);
   const upDay = localStorage.getItem(props.reducer7[0].first);
   const upgradDay = JSON.parse(upDay);
+  const input = useRef(null);
+  const input1 = useRef(null);
+  const input2 = useRef(null);
+  const textarea = useRef(null);
+
+  const textarea2 = useRef(null);
+
+  const updateInput = useRef(null);
+  const updateTextarea = useRef(null);
+
+  const updateTextarea2 = useRef(null);
 
   var countDate = new Date();
   countDate.setHours(24, 0, 0, 0);
+  const getLocalItems = () => {
+    let data = localStorage.getItem("posts");
 
+    if (data) {
+      return JSON.parse(data);
+    } else {
+      return [
+        { title: "Hello0", content: "Here comes description in detail." },
+        { title: "Hello1", content: "Here comes description in detail." },
+        { title: "Hello2", content: "Here comes description in detail." },
+        { title: "Hello3", content: "Here comes description in detail." },
+      ];
+    }
+  };
+
+  const [posts, setPosts] = useState(getLocalItems);
+  const createPost = () => {
+    if (!input.current.value || !textarea.current.value) {
+      alert("제목과 본문을 입력하세요");
+      return;
+    }
+    setPosts([
+      {
+        title: input.current.value,
+        content: textarea.current.value,
+        emo: textarea2.current.value,
+        emo1: input1.current.value,
+        emo2: input2.current.value,
+      },
+      ...posts,
+    ]);
+    input.current.value = "";
+    input1.current.value = "";
+    input2.current.value = "";
+    textarea.current.value = "";
+    textarea2.current.value = "";
+  };
+  const deletePost = (index) => {
+    setPosts(posts.filter((_, postIndex) => postIndex !== index));
+  };
+
+  const enableUpdate = (index) => {
+    setPosts(
+      posts.map((post, postIndex) => {
+        if (postIndex === index) post.enableUpdate = true;
+        return post;
+      })
+    );
+    console.log(posts);
+  };
+  const disableUpdate = (index) => {
+    setPosts(
+      posts.map((post, postIndex) => {
+        if (postIndex === index) post.enableUpdate = false;
+        return post;
+      })
+    );
+    console.log(posts);
+  };
+
+  const updatePost = (index) => {
+    if (!updateInput.current.value || !updateTextarea.current.value) {
+      alert("수정할 제목과 본문을 모두 입력하세요.");
+      return;
+    }
+    setPosts(
+      posts.map((post, postIndex) => {
+        if (postIndex === index) {
+          post.title = updateInput.current.value;
+          post.content = updateTextarea.current.value;
+          post.emo = updateTextarea2.current.value;
+
+          post.enableUpdate = false;
+        }
+        return post;
+      })
+    );
+  };
+  useEffect(() => {
+    localStorage.setItem("posts", JSON.stringify(posts));
+  }, [posts]);
   return (
     <div className="App">
+      <input type="text" placeholder="제목을 입력하세요" ref={input} />
+      <br />
+      <input
+        className="time_txt"
+        placeholder="00"
+        maxLength="2"
+        type="number"
+        min="00"
+        max="24"
+        ref={input1}
+      ></input>
+      <input
+        className="time_txt"
+        placeholder="00"
+        type="number"
+        maxLength="2"
+        min="00"
+        max="60"
+        ref={input2}
+      ></input>
+      <textarea
+        cols="30"
+        rows="5"
+        placeholder="질문하고자 하는 내용을 입력하세요"
+        ref={textarea}
+      ></textarea>
+      <ul>
+        <li>
+          <label htmlFor="rad_02">많이😊</label>
+          <input
+            className="text_area1"
+            id="rad_02"
+            placeholder="중요도"
+            type="radio"
+            value="많이😊"
+            name="emotion"
+            ref={textarea2}
+            onChange={(e) => {
+              setPosts.emo2(e.target.value);
+            }}
+          ></input>
+        </li>
+
+        <li>
+          <label htmlFor="rad_04">없음🤢</label>
+          <input
+            className="text_area1"
+            id="rad_04"
+            placeholder="중요도"
+            type="radio"
+            value="없음🤢"
+            name="emotion"
+            ref={textarea2}
+            onChange={(e) => {
+              setPosts.emo2(e.target.value);
+            }}
+          ></input>
+        </li>
+        <li>
+          <label htmlFor="rad_03">적게🤔</label>
+          <input
+            className="text_area1"
+            id="rad_03"
+            placeholder="중요도"
+            type="radio"
+            value="적게🤔"
+            name="emotion"
+            ref={textarea2}
+            onChange={(e) => {
+              setPosts.emo2(e.target.value);
+            }}
+          ></input>
+        </li>
+        <li>
+          <label htmlFor="rad_01">제일😍</label>
+          <input
+            className="text_area1"
+            id="rad_01"
+            placeholder="중요도"
+            type="radio"
+            value="제일😍"
+            name="emotion"
+            ref={textarea2}
+            onChange={(e) => {
+              setPosts.emo2(e.target.value);
+            }}
+          ></input>
+        </li>
+      </ul>
+      <button onClick={createPost}>create</button>
+
+      {posts.map((post, index) => {
+        return (
+          <article key={index}>
+            {post.enableUpdate ? (
+              // 수정모드
+              <>
+                <div className="post">
+                  <input
+                    type="text"
+                    defaultValue={post.title}
+                    ref={updateInput}
+                  />
+                  <br />
+                  <textarea
+                    defaultValue={post.content}
+                    ref={updateTextarea}
+                  ></textarea>
+                </div>
+                <ul className="btns">
+                  <li onClick={() => updatePost(index)}>입력</li>
+                  <li onClick={() => disableUpdate(index)}>취소</li>
+                </ul>
+              </>
+            ) : (
+              // 출력모드
+              <>
+                <div className="post">
+                  <strong className="abcd">{post.title}</strong>
+                  <p className="efg">{post.content}</p>
+
+                  <p>{post.emo1}</p>
+
+                  {post.emo2 === "" ? "00" : post.emo2}
+                  <p>{post.emo}</p>
+                </div>
+                <ul className="btns">
+                  <li onClick={() => enableUpdate(index)}>수정</li>
+                  <li onClick={() => deletePost(index)}>삭제</li>
+                  <li>
+                    <button
+                      id={index}
+                      onClick={() => {
+                        var nowTime = new Date();
+
+                        var year = nowTime.getFullYear();
+                        var mon = nowTime.getMonth() + 1;
+                        var date = nowTime.getDate();
+                        var hour = nowTime.getHours();
+                        var min = nowTime.getMinutes();
+
+                        let ymdInfo = {
+                          year: year,
+                          mon: mon,
+                          date: date,
+                          hour: hour,
+                          min: min,
+                        };
+
+                        parcent >= 100
+                          ? setParcent(parcent)
+                          : setParcent(parcent + 25);
+                        localStorage.setItem(parcent_name, parcent + 25);
+
+                        props.dispatch({ type: "알림아이콘보기" });
+                        props.dispatch({
+                          type: "텍스트보내기",
+                          payload3: posts[index].title,
+                        });
+
+                        parcent === 50
+                          ? setRanking(Number(ranking) + 1)
+                          : setRanking(Number(ranking));
+
+                        localStorage.setItem(rank, ranking);
+                        props.dispatch({
+                          type: "날짜전송",
+                          payload2: ymdInfo,
+                        });
+                        const txt01 = document.querySelectorAll(".btns button");
+                        const txt011 = document.querySelectorAll(".post .abcd");
+
+                        const txt02 = document.querySelectorAll(".post .efg");
+
+                        txt01[index].classList.add("off");
+                        txt011[index].classList.add("op_off");
+                        txt02[index].classList.add("op_off");
+                      }}
+                    >
+                      <img src="../btn_complete.png" alt="check"></img>
+                    </button>
+                  </li>
+                </ul>
+              </>
+            )}
+          </article>
+        );
+      })}
+
       {useEffect(() => {
         var moment = new Date();
         let start = new Date(
@@ -284,24 +564,22 @@ function App(props) {
                                       type: "날짜전송",
                                       payload2: ymdInfo,
                                     });
-                                    const finded = document.querySelectorAll(
+                                    const txt01 = document.querySelectorAll(
                                       ".section02 .list button"
                                     );
-                                    const todayFind = document.querySelectorAll(
+                                    const txt02 = document.querySelectorAll(
                                       ".section02 .list .today_date"
                                     );
-                                    const todayFind1 =
-                                      document.querySelectorAll(
-                                        ".section02 .list .today_best"
-                                      );
-                                    const todayFind2 =
-                                      document.querySelectorAll(
-                                        ".section02 .list .today_txt"
-                                      );
-                                    finded[i].classList.add("off");
-                                    todayFind[i].classList.add("op_off");
-                                    todayFind1[i].classList.add("op_off");
-                                    todayFind2[i].classList.add("op_off");
+                                    const txt03 = document.querySelectorAll(
+                                      ".section02 .list .today_best"
+                                    );
+                                    const txt04 = document.querySelectorAll(
+                                      ".section02 .list .today_txt"
+                                    );
+                                    txt01[i].classList.add("off");
+                                    txt02[i].classList.add("op_off");
+                                    txt03[i].classList.add("op_off");
+                                    txt04[i].classList.add("op_off");
                                   }}
                                 >
                                   <img
@@ -310,6 +588,7 @@ function App(props) {
                                   ></img>
                                 </button>
                               </li>
+                              <li onClick={() => deletePost(i)}>삭제</li>
                             </ul>
                           </div>
                         );

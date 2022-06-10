@@ -6,7 +6,6 @@ import { Calendar } from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
 import "../css/default.css";
 import "../css/calendar.css";
 import "../css/index.css";
@@ -15,10 +14,6 @@ import Footer from "../common/footer";
 function Calendar12(props) {
   const [value, onChange] = useState(new Date());
   let history = useHistory();
-  const [value1, onChange1] = useState(
-    localStorage.getItem(props.state2[0].daytxt)
-  );
-  console.log(value1);
   const upDate = localStorage.getItem(props.state[0].dayName);
   const upgradDate = JSON.parse(upDate);
   const upTxt = localStorage.getItem(props.state2[0].daytxt);
@@ -30,7 +25,7 @@ function Calendar12(props) {
   let box = new Array();
   upDate === null
     ? console.log("실패")
-    : upgradDate.map((a) => {
+    : upgradDate.map(function (a, i) {
         box.push(new Date(a));
       });
   let gap = box.map(function (time, indexs) {
@@ -39,9 +34,9 @@ function Calendar12(props) {
   let TimeResult = gap.map(function (dated, indexed) {
     return Math.ceil(gap[indexed] / (1000 * 60 * 60 * 24));
   });
-  const deletePost = (index) => {
-    onChange1(value1.filter((_, postIndex) => postIndex !== index));
-  };
+  const id_index = "id1";
+
+  let emotionCheck = localStorage.getItem(id_index);
   return (
     <div>
       <header>
@@ -56,7 +51,6 @@ function Calendar12(props) {
         selected={value}
         id="box_calendar"
       />
-
       <section className="important_data">
         <div className="title_wrap">
           <div className="date_title">예약하고 싶은 일정</div>
@@ -64,7 +58,6 @@ function Calendar12(props) {
             ? upgradTxt.map(function (a, i) {
                 let html = [];
                 html.push(<p className="dot"></p>);
-
                 return (
                   <div className="date_wrap" key={i}>
                     {html}
@@ -79,11 +72,17 @@ function Calendar12(props) {
                         ? `D+${TimeResult[i]}`.replace("-", "")
                         : `D-${TimeResult[i]}`}
                     </p>
+                    <p
+                      onClick={() => {
+                        props.dispatch({ type: "id값전송", payload13: i });
+                      }}
+                    >
+                      {upgradTxt[i]}
+                    </p>
                   </div>
                 );
               })
             : null}
-
           <DatePicker
             todayButton="Vandaag"
             onChange={(date) => onChange(date)}
@@ -130,13 +129,12 @@ function Calendar12(props) {
     </div>
   );
 }
-
 function store04(state) {
   return {
     state: state.reducer8,
     state2: state.reducer9,
     state3: state.reducer10,
+    state4: state.reducer13,
   };
 }
-
 export default connect(store04)(Calendar12);
