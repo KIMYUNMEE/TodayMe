@@ -57,8 +57,6 @@ function App(props) {
   const input2 = useRef(null);
   const textarea = useRef(null);
 
-  const textarea2 = useRef(null);
-
   const updateInput = useRef(null);
   const updateTextarea = useRef(null);
 
@@ -83,6 +81,7 @@ function App(props) {
 
   const [posts, setPosts] = useState(getLocalItems);
   const createPost = () => {
+    let ab = document.querySelectorAll(".text_area1").value;
     if (!input.current.value || !textarea.current.value) {
       alert("제목과 본문을 입력하세요");
       return;
@@ -91,7 +90,7 @@ function App(props) {
       {
         title: input.current.value,
         content: textarea.current.value,
-        emo: textarea2.current.value,
+        emo: ab,
         emo1: input1.current.value,
         emo2: input2.current.value,
       },
@@ -101,7 +100,7 @@ function App(props) {
     input1.current.value = "";
     input2.current.value = "";
     textarea.current.value = "";
-    textarea2.current.value = "";
+    ab = "";
   };
   const deletePost = (index) => {
     setPosts(posts.filter((_, postIndex) => postIndex !== index));
@@ -185,10 +184,6 @@ function App(props) {
             type="radio"
             value="많이😊"
             name="emotion"
-            ref={textarea2}
-            onChange={(e) => {
-              setPosts.emo2(e.target.value);
-            }}
           ></input>
         </li>
 
@@ -201,10 +196,6 @@ function App(props) {
             type="radio"
             value="없음🤢"
             name="emotion"
-            ref={textarea2}
-            onChange={(e) => {
-              setPosts.emo2(e.target.value);
-            }}
           ></input>
         </li>
         <li>
@@ -216,10 +207,6 @@ function App(props) {
             type="radio"
             value="적게🤔"
             name="emotion"
-            ref={textarea2}
-            onChange={(e) => {
-              setPosts.emo2(e.target.value);
-            }}
           ></input>
         </li>
         <li>
@@ -231,10 +218,6 @@ function App(props) {
             type="radio"
             value="제일😍"
             name="emotion"
-            ref={textarea2}
-            onChange={(e) => {
-              setPosts.emo2(e.target.value);
-            }}
           ></input>
         </li>
       </ul>
