@@ -42,13 +42,7 @@ code {
   display: inline-block;
 }
 
-.update,
-.delete {
-  border: 1px solid red;
-  color: #333;
-  padding: 10px;
-  display: inline-block;
-}
+
 
 .txt_wrap {
   text-align: right;
@@ -209,6 +203,10 @@ button {
   width: 25%;
 }
 
+.list li:last-child {
+  position: relative;
+}
+
 .list_tab li {
   float: left;
   width: 25%;
@@ -304,9 +302,20 @@ button {
   margin-bottom: 400px;
 }
 
-
-
-@media screen and (max-width:1799px) {}
+.delete {
+  border: 0;
+  outline: 0;
+  height: 28px;
+  line-height: 28px;
+  vertical-align: 9px;
+  padding: 0 15px;
+  background: #a88f71;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+}
 
 @media screen and (max-width:1199px) {
   .ico_img01 {
@@ -336,8 +345,27 @@ button {
   .parcent {
     display: block;
   }
+
+  .list li:last-child button:first-of-type {
+    margin-right: 25px;
+  }
 }
 
+@media screen and (max-width:730px) {
+  .delete {
+    padding: 0 8px;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .delete {
+    background: none;
+    color: #333;
+    font-size: 13px;
+    padding: 0;
+    border-radius: 0;
+  }
+}
 
 @media screen and (max-width:660px) {
 
@@ -428,6 +456,13 @@ button {
 
 }
 
+.delete {
+  background: none;
+  color: #333;
+  font-size: 12px;
+  padding: 0;
+  border-radius: 0;
+}
 
 .date_txt {
   width: 200px;

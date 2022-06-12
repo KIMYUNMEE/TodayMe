@@ -71,6 +71,16 @@ function reducer(state = basic, action) {
     return state;
   }
 }
+function reducer13(state = basic, action) {
+  if (action.type === "삭제") {
+    let copy = [...basic];
+    copy[0].basicState.pop(action.payload13);
+    localStorage.setItem(copy[0].saveData, JSON.stringify(copy[0].basicState));
+    return copy;
+  } else {
+    return state;
+  }
+}
 function reducer2(state = toggle, action2) {
   if (action2.type === "알림창열기") {
     let copy3 = [...toggle];
@@ -190,16 +200,7 @@ function reducer12(state = emotion, action12) {
     return state;
   }
 }
-function reducer13(state = emotion1, action13) {
-  if (action13.type === "id값전송") {
-    let copy14 = [...emotion1];
-    copy14[0].emotionValue.unshift(action13.payload13);
-    localStorage.setItem(copy14[0].profileEmotion, copy14[0].emotionValue);
-    return copy14;
-  } else {
-    return state;
-  }
-}
+
 let store = createStore(
   combineReducers({
     reducer,

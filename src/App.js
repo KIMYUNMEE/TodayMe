@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { useScript } from "./main/hook";
-
 import "./css/default.css";
 import "./App.css";
 
@@ -15,7 +14,6 @@ import Write from "./main/write";
 import Profile from "./sub/profile";
 import Footer from "./common/footer";
 import Notice from "./main/notice";
-const arr = ["white", "black", "blue", "green"];
 function App(props) {
   // kakao SDK import하기
   const status = useScript("https://developers.kakao.com/sdk/js/kakao.js");
@@ -36,7 +34,6 @@ function App(props) {
     }
   }, [status]);
   let [loadingState, setLoading] = useState(false);
-
   let [ranking, setRanking] = useState(0);
   let [parcent, setParcent] = useState(0);
   let [addToggle, setAddToggle] = useState(false);
@@ -52,333 +49,11 @@ function App(props) {
   const upParcent = +localStorage.getItem(parcent_name);
   const upDay = localStorage.getItem(props.reducer7[0].first);
   const upgradDay = JSON.parse(upDay);
-  const input = useRef(null);
-  const input1 = useRef(null);
-  const input2 = useRef(null);
-  const textarea = useRef(null);
-
-  const updateInput = useRef(null);
-  const updateTextarea = useRef(null);
-
-  const updateTextarea2 = useRef(null);
-
   var countDate = new Date();
   countDate.setHours(24, 0, 0, 0);
-  const getLocalItems = () => {
-    let data = localStorage.getItem("posts");
 
-    if (data) {
-      return JSON.parse(data);
-    } else {
-      return [
-        {
-          title: "Hello0",
-          content: "Here comes description in detail.",
-          emo: "웃다",
-          emo1: "웃다",
-          emo2: "웃다",
-        },
-        {
-          title: "Hello1",
-          content: "Here comes description in detail.",
-          emo: "웃다",
-          emo1: "웃다",
-          emo2: "웃다",
-        },
-        {
-          title: "Hello2",
-          content: "Here comes description in detail.",
-          emo: "웃다",
-          emo1: "웃다",
-          emo2: "웃다",
-        },
-        {
-          title: "Hello3",
-          content: "Here comes description in detail.",
-          emo: "웃다",
-          emo1: "웃다",
-          emo2: "웃다",
-        },
-      ];
-    }
-  };
-
-  const [posts, setPosts] = useState(getLocalItems);
-  const createPost = () => {
-    let ab1 = document.querySelector(".abc").value;
-    let ab = document.querySelector(".text_area1").value;
-    if (!input.current.value || !textarea.current.value) {
-      alert("제목과 본문을 입력하세요");
-      return;
-    }
-    setPosts([
-      {
-        title: input.current.value,
-        content: textarea.current.value,
-        emo: ab,
-        emo1: input1.current.value,
-        emo2: input2.current.value,
-        radio: ab1,
-      },
-      ...posts,
-    ]);
-    input.current.value = "";
-    input1.current.value = "";
-    input2.current.value = "";
-    textarea.current.value = "";
-
-    ab1 = "";
-    ab = "";
-  };
-  const deletePost = (index) => {
-    setPosts(posts.filter((_, postIndex) => postIndex !== index));
-  };
-
-  const enableUpdate = (index) => {
-    setPosts(
-      posts.map((post, postIndex) => {
-        if (postIndex === index) post.enableUpdate = true;
-        return post;
-      })
-    );
-    console.log(posts);
-  };
-  const disableUpdate = (index) => {
-    setPosts(
-      posts.map((post, postIndex) => {
-        if (postIndex === index) post.enableUpdate = false;
-        return post;
-      })
-    );
-    console.log(posts);
-  };
-
-  const updatePost = (index) => {
-    if (!updateInput.current.value || !updateTextarea.current.value) {
-      alert("수정할 제목과 본문을 모두 입력하세요.");
-      return;
-    }
-    setPosts(
-      posts.map((post, postIndex) => {
-        if (postIndex === index) {
-          post.title = updateInput.current.value;
-          post.content = updateTextarea.current.value;
-          post.emo = updateTextarea2.current.value;
-
-          post.enableUpdate = false;
-        }
-        return post;
-      })
-    );
-  };
-  useEffect(() => {
-    localStorage.setItem("posts", JSON.stringify(posts));
-  }, [posts]);
   return (
     <div className="App">
-      <input type="text" placeholder="제목을 입력하세요" ref={input} />
-      <br />
-      <input
-        className="time_txt"
-        placeholder="00"
-        maxLength="2"
-        type="number"
-        min="00"
-        max="24"
-        ref={input1}
-      ></input>
-      <input
-        className="time_txt"
-        placeholder="00"
-        type="number"
-        maxLength="2"
-        min="00"
-        max="60"
-        ref={input2}
-      ></input>
-      <textarea
-        cols="30"
-        rows="5"
-        placeholder="질문하고자 하는 내용을 입력하세요"
-        ref={textarea}
-      ></textarea>
-      {arr.map((color) => (
-        <input type="radio" name="colors" value={color} className="abc" />
-      ))}
-      <ul className="text_area1_wrap">
-        <li>
-          <label htmlFor="rad_01">제일😍</label>
-          <input
-            className="text_area1"
-            id="rad_01"
-            placeholder="중요도"
-            type="radio"
-            value="제일😍"
-            onChange={(e) => {
-              setPosts([
-                {
-                  emo: e.current.value,
-                },
-                ...posts,
-              ]);
-            }}
-          ></input>
-        </li>
-        <li>
-          <label htmlFor="rad_02">많이😊</label>
-          <input
-            className="text_area1"
-            id="rad_02"
-            placeholder="중요도"
-            type="radio"
-            value="많이😊"
-            onChange={(e) => {
-              setPosts([
-                {
-                  emo: e.current.value,
-                },
-                ...posts,
-              ]);
-            }}
-          ></input>
-        </li>
-        <li>
-          <label htmlFor="rad_03">적게🤔</label>
-          <input
-            className="text_area1"
-            id="rad_03"
-            placeholder="중요도"
-            type="radio"
-            value="적게🤔"
-            onChange={(e) => {
-              setPosts([
-                {
-                  emo: e.current.value,
-                },
-                ...posts,
-              ]);
-            }}
-          ></input>
-        </li>
-        <li>
-          <label htmlFor="rad_04">없음🤢</label>
-          <input
-            className="text_area1"
-            id="rad_04"
-            placeholder="중요도"
-            type="radio"
-            value="없음🤢"
-            onChange={(e) => {
-              setPosts([
-                {
-                  emo: e.current.value,
-                },
-                ...posts,
-              ]);
-            }}
-          ></input>
-        </li>
-      </ul>
-      <button onClick={createPost}>create</button>
-
-      {posts.map((post, index) => {
-        return (
-          <article key={index}>
-            {post.enableUpdate ? (
-              // 수정모드
-              <>
-                <div className="post">
-                  <input
-                    type="text"
-                    defaultValue={post.title}
-                    ref={updateInput}
-                  />
-                  <br />
-                  <textarea
-                    defaultValue={post.content}
-                    ref={updateTextarea}
-                  ></textarea>
-                </div>
-                <ul className="btns">
-                  <li onClick={() => updatePost(index)}>입력</li>
-                  <li onClick={() => disableUpdate(index)}>취소</li>
-                </ul>
-              </>
-            ) : (
-              // 출력모드
-              <>
-                <div className="post">
-                  <strong className="abcd">{post.title}</strong>
-                  <p className="efg">{post.content}</p>
-                  <p>{post.emo1}</p>
-
-                  {post.emo2 === "" ? "00" : post.emo2}
-                  <p>{post.emo}</p>
-                  <p>{post.radio}</p>
-                </div>
-                <ul className="btns">
-                  <li onClick={() => enableUpdate(index)}>수정</li>
-                  <li onClick={() => deletePost(index)}>삭제</li>
-                  <li>
-                    <button
-                      id={index}
-                      onClick={() => {
-                        var nowTime = new Date();
-
-                        var year = nowTime.getFullYear();
-                        var mon = nowTime.getMonth() + 1;
-                        var date = nowTime.getDate();
-                        var hour = nowTime.getHours();
-                        var min = nowTime.getMinutes();
-
-                        let ymdInfo = {
-                          year: year,
-                          mon: mon,
-                          date: date,
-                          hour: hour,
-                          min: min,
-                        };
-
-                        parcent >= 100
-                          ? setParcent(parcent)
-                          : setParcent(parcent + 25);
-                        localStorage.setItem(parcent_name, parcent + 25);
-
-                        props.dispatch({ type: "알림아이콘보기" });
-                        props.dispatch({
-                          type: "텍스트보내기",
-                          payload3: posts[index].title,
-                        });
-
-                        parcent === 50
-                          ? setRanking(Number(ranking) + 1)
-                          : setRanking(Number(ranking));
-
-                        localStorage.setItem(rank, ranking);
-                        props.dispatch({
-                          type: "날짜전송",
-                          payload2: ymdInfo,
-                        });
-                        const txt01 = document.querySelectorAll(".btns button");
-                        const txt011 = document.querySelectorAll(".post .abcd");
-
-                        const txt02 = document.querySelectorAll(".post .efg");
-
-                        txt01[index].classList.add("off");
-                        txt011[index].classList.add("op_off");
-                        txt02[index].classList.add("op_off");
-                      }}
-                    >
-                      <img src="../btn_complete.png" alt="check"></img>
-                    </button>
-                  </li>
-                </ul>
-              </>
-            )}
-          </article>
-        );
-      })}
-
       {useEffect(() => {
         var moment = new Date();
         let start = new Date(
@@ -388,7 +63,6 @@ function App(props) {
                 upgradDay[0].findDay - 1
               }`
         );
-
         let difference = moment - start;
         let oneDay = 1000 * 60 * 60 * 24;
         let counte = Math.floor(difference / oneDay);
@@ -404,7 +78,6 @@ function App(props) {
         var timer = setInterval(function () {
           var moment = new Date().getTime();
           var difference = countDate - moment;
-
           var hours = Math.floor(
             (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
           );
@@ -500,15 +173,6 @@ function App(props) {
                   <div className="member_caption">
                     님은 {firstDay}일째 알찬 하루를 사용중!!
                   </div>
-                  {arr.map((color) => (
-                    <input
-                      type="radio"
-                      name="colors"
-                      value={color}
-                      className="abc"
-                      onChange={() => {}}
-                    />
-                  ))}
                 </div>
               </section>
               <section className="section02">
@@ -551,6 +215,106 @@ function App(props) {
                     <li>중요도</li>
                     <li>완료</li>
                   </ul>
+                  {upTodo !== null
+                    ? upgradTodo.map(function (a, i) {
+                        return (
+                          <div className="list" key={i}>
+                            <ul>
+                              <li>
+                                <p className="today_date">
+                                  {upgradTodo[i].postText}:
+                                  {upgradTodo[i].postTime}
+                                </p>
+                              </li>
+                              <li>
+                                <p className="today_txt">
+                                  {upgradTodo[i].post}
+                                </p>
+                              </li>
+                              <li>
+                                <p className="today_best">
+                                  {upgradTodo[i].postEmotion}
+                                </p>
+                              </li>
+                              <li>
+                                <button
+                                  id={i}
+                                  onClick={() => {
+                                    var nowTime = new Date();
+                                    var year = nowTime.getFullYear();
+                                    var mon = nowTime.getMonth() + 1;
+                                    var date = nowTime.getDate();
+                                    var hour = nowTime.getHours();
+                                    var min = nowTime.getMinutes();
+                                    let DateFac = {
+                                      year: year,
+                                      mon: mon,
+                                      date: date,
+                                      hour: hour,
+                                      min: min,
+                                    };
+                                    parcent >= 100
+                                      ? setParcent(parcent)
+                                      : setParcent(parcent + 25);
+                                    localStorage.setItem(
+                                      parcent_name,
+                                      parcent + 25
+                                    );
+                                    props.dispatch({
+                                      type: "날짜전송",
+                                      payload2: DateFac,
+                                    });
+                                    props.dispatch({ type: "알림아이콘보기" });
+                                    props.dispatch({
+                                      type: "텍스트보내기",
+                                      payload3: upgradTodo[i].post,
+                                    });
+                                    parcent === 50
+                                      ? setRanking(Number(ranking) + 1)
+                                      : setRanking(Number(ranking));
+                                    localStorage.setItem(rank, ranking);
+                                    const finded = document.querySelectorAll(
+                                      ".section02 .list button"
+                                    );
+                                    const todayFind = document.querySelectorAll(
+                                      ".section02 .list .today_date"
+                                    );
+                                    const todayFind1 =
+                                      document.querySelectorAll(
+                                        ".section02 .list .today_best"
+                                      );
+                                    const todayFind2 =
+                                      document.querySelectorAll(
+                                        ".section02 .list .today_txt"
+                                      );
+                                    finded[i].classList.add("off");
+                                    todayFind[i].classList.add("op_off");
+                                    todayFind1[i].classList.add("op_off");
+                                    todayFind2[i].classList.add("op_off");
+                                  }}
+                                >
+                                  <img
+                                    src="../btn_complete.png"
+                                    alt="check"
+                                  ></img>
+                                </button>
+                                <button
+                                  onClick={() => {
+                                    props.dispatch({
+                                      type: "삭제",
+                                      payload13: upgradTodo,
+                                    });
+                                  }}
+                                  className="delete"
+                                >
+                                  삭제하기
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        );
+                      })
+                    : null}
                 </div>
               </section>
               {props.reducer[0].toggle === true ? <Write></Write> : null}
@@ -581,7 +345,6 @@ function App(props) {
     </div>
   );
 }
-
 function store01(state) {
   return {
     reducer: state.reducer,
@@ -591,7 +354,7 @@ function store01(state) {
     reducer5: state.reducer5,
     reducer6: state.reducer7,
     reducer7: state.reducer6,
+    reducer8: state.reducer13,
   };
 }
-
 export default connect(store01)(App);
