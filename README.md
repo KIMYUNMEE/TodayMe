@@ -73,6 +73,13 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 ![할일쓰기창05](https://user-images.githubusercontent.com/75771515/172301742-8a9ce1ec-0c41-4b86-810f-d366628e3974.png)
 ![알림창](https://user-images.githubusercontent.com/75771515/172302395-0eaa2458-a437-4930-96fa-7d011d5b7fab.png)
 
+### 등록한 일정을 지우고 싶을 때 삭제버튼을 누르면
+![삭제하기](https://user-images.githubusercontent.com/75771515/173243067-f62b2349-3fa5-475d-98ef-52cf8f0f87ab.png)
+
+
+### 등록한 일정 삭제 가능
+![삭제하기02](https://user-images.githubusercontent.com/75771515/173243072-0c7d010c-0a89-4c6e-ad29-3beed1bf49a9.png)
+
 ### 할일을 다 작성했을 시 작성완료를 누르면 
 
 ![작성완료](https://user-images.githubusercontent.com/75771515/172303286-699da174-1de3-4b3e-90db-8b37764c8799.png)
