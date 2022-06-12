@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import "../css/write.css";
 import "../css/index.css";
 function Writeform(props) {
-  let [write, setwrite] = useState([]);
+  let [post, setpost] = useState([]);
   let [writeH, setHwrite] = useState([]);
   let [writeM, setMwrite] = useState([]);
   let [writeI, setIwrite] = useState([]);
@@ -15,10 +15,9 @@ function Writeform(props) {
         className="text_area"
         placeholder="내가 해야할 일"
         onChange={(e) => {
-          setwrite(e.target.value);
+          setpost(e.target.value);
         }}
       ></input>
-
       <div className="date">
         <p className="day">시간</p>
         <form className="time_wrap" autoComplete="off">
@@ -56,7 +55,6 @@ function Writeform(props) {
               placeholder="중요도"
               type="radio"
               value="제일😍"
-              name="emotion"
               onChange={(e) => {
                 setIwrite(e.target.value);
               }}
@@ -70,7 +68,6 @@ function Writeform(props) {
               placeholder="중요도"
               type="radio"
               value="많이😊"
-              name="emotion"
               onChange={(e) => {
                 setIwrite(e.target.value);
               }}
@@ -84,7 +81,6 @@ function Writeform(props) {
               placeholder="중요도"
               type="radio"
               value="적게🤔"
-              name="emotion"
               onChange={(e) => {
                 setIwrite(e.target.value);
               }}
@@ -98,7 +94,6 @@ function Writeform(props) {
               placeholder="중요도"
               type="radio"
               value="없음🤢"
-              name="emotion"
               onChange={(e) => {
                 setIwrite(e.target.value);
               }}
@@ -108,34 +103,29 @@ function Writeform(props) {
       </div>
       <button
         onClick={() => {
-          let arrayWrite = [...write];
-          arrayWrite.unshift(write);
-          setwrite(arrayWrite);
-
+          let arrayWrite = [...post];
+          arrayWrite.unshift(post);
+          setpost(arrayWrite);
           let arrayH = [...writeH];
           arrayH.unshift(writeH);
           setHwrite(arrayH);
-
           let arrayM = [...writeM];
           arrayM.unshift(writeM);
           setMwrite(arrayM);
           let arrayI = [...writeI];
           arrayI.unshift(writeI);
           setIwrite(arrayI);
-
           let input_form = document.querySelector(".text_area").value;
           let input_form2 = document.querySelector(".time_txt").value;
           let input_form3 = document.querySelector(
             ".text_area1_wrap li .text_area1"
           ).value;
-
           let write_form = {
-            write: write,
+            post: post,
             writeH: writeH,
             writeM: writeM,
             writeI: writeI,
           };
-
           input_form === "" || input_form2 === "" || input_form3 === ""
             ? alert("모두 다 입력해주세요")
             : props.dispatch({ type: "할일쓰기창닫기", payload: write_form });
@@ -162,11 +152,9 @@ function Writeform(props) {
     </div>
   );
 }
-
 function store02(state) {
   return {
     reducer: state.reducer,
   };
 }
-
 export default connect(store02)(Writeform);
