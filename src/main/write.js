@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import "../css/write.css";
 import "../css/index.css";
 function Writeform(props) {
-  let [post, setpost] = useState([]);
-  let [writeH, setHwrite] = useState([]);
-  let [writeM, setMwrite] = useState([]);
-  let [writeI, setIwrite] = useState([]);
+  let [post, setPost] = useState([]);
+  let [postText, setPostText] = useState([]);
+  let [postTime, setPostTime] = useState([]);
+  let [postEmotion, setPostEmotion] = useState([]);
 
   return (
     <div className="write">
@@ -15,7 +15,7 @@ function Writeform(props) {
         className="text_area"
         placeholder="내가 해야할 일"
         onChange={(e) => {
-          setpost(e.target.value);
+          setPost(e.target.value);
         }}
       ></input>
       <div className="date">
@@ -29,8 +29,8 @@ function Writeform(props) {
             min="00"
             max="24"
             onChange={(e) => {
-              setHwrite(e.target.value);
-              setMwrite("00");
+              setPostText(e.target.value);
+              setPostTime("00");
             }}
           ></input>
           <input
@@ -41,7 +41,7 @@ function Writeform(props) {
             min="00"
             max="60"
             onChange={(e) => {
-              setMwrite(e.target.value);
+              setPostTime(e.target.value);
             }}
           ></input>
         </form>
@@ -56,7 +56,7 @@ function Writeform(props) {
               type="radio"
               value="제일😍"
               onChange={(e) => {
-                setIwrite(e.target.value);
+                setPostEmotion(e.target.value);
               }}
             ></input>
           </li>
@@ -69,7 +69,7 @@ function Writeform(props) {
               type="radio"
               value="많이😊"
               onChange={(e) => {
-                setIwrite(e.target.value);
+                setPostEmotion(e.target.value);
               }}
             ></input>
           </li>
@@ -82,7 +82,7 @@ function Writeform(props) {
               type="radio"
               value="적게🤔"
               onChange={(e) => {
-                setIwrite(e.target.value);
+                setPostEmotion(e.target.value);
               }}
             ></input>
           </li>
@@ -95,7 +95,7 @@ function Writeform(props) {
               type="radio"
               value="없음🤢"
               onChange={(e) => {
-                setIwrite(e.target.value);
+                setPostEmotion(e.target.value);
               }}
             ></input>
           </li>
@@ -105,16 +105,16 @@ function Writeform(props) {
         onClick={() => {
           let arrayWrite = [...post];
           arrayWrite.unshift(post);
-          setpost(arrayWrite);
-          let arrayH = [...writeH];
-          arrayH.unshift(writeH);
-          setHwrite(arrayH);
-          let arrayM = [...writeM];
-          arrayM.unshift(writeM);
-          setMwrite(arrayM);
-          let arrayI = [...writeI];
-          arrayI.unshift(writeI);
-          setIwrite(arrayI);
+          setPost(arrayWrite);
+          let arrayH = [...postText];
+          arrayH.unshift(postText);
+          setPostText(arrayH);
+          let arrayM = [...postTime];
+          arrayM.unshift(postTime);
+          setPostTime(arrayM);
+          let arrayI = [...postEmotion];
+          arrayI.unshift(postEmotion);
+          setPostEmotion(arrayI);
           let input_form = document.querySelector(".text_area").value;
           let input_form2 = document.querySelector(".time_txt").value;
           let input_form3 = document.querySelector(
@@ -122,9 +122,9 @@ function Writeform(props) {
           ).value;
           let write_form = {
             post: post,
-            writeH: writeH,
-            writeM: writeM,
-            writeI: writeI,
+            postText: postText,
+            postTime: postTime,
+            postEmotion: postEmotion,
           };
           input_form === "" || input_form2 === "" || input_form3 === ""
             ? alert("모두 다 입력해주세요")
@@ -139,10 +139,10 @@ function Writeform(props) {
         className="close"
         onClick={() => {
           let write_form = {
-            write: write,
-            writeH: writeH,
-            writeM: writeM,
-            writeI: writeI,
+            post: post,
+            postText: postText,
+            postTime: postTime,
+            postEmotion: postEmotion,
           };
           props.dispatch({ type: "할일쓰기창닫기", payload: write_form });
         }}
