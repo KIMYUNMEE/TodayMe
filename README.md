@@ -78,7 +78,8 @@ React기반의 Js, html, css를 이용한 개인 프로젝트입니다.
 
 
 ### 등록한 일정 삭제 가능
-![삭제하기02](https://user-images.githubusercontent.com/75771515/173243072-0c7d010c-0a89-4c6e-ad29-3beed1bf49a9.png)
+![삭제하기02](https://user-images.githubusercontent.com/75771515/173243150-6f9527cb-f9bd-4ae8-9c79-a7fd206236c7.png)
+
 
 ### 할일을 다 작성했을 시 작성완료를 누르면 
 
