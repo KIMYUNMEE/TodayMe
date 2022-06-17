@@ -99,7 +99,7 @@ footer ul li:nth-child(2) {
   border-top: none;
 }
 
-footer ul li:nth-child(2) a {
+footer ul li:nth-child(2) button {
   position: absolute;
   top: -33px;
   text-indent: -99999px;

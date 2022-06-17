@@ -24,18 +24,17 @@ function Footer(props) {
         </li>
         <li>
           {props.addToggle === false ? (
-            <a
-              href="#"
+            <button
               onClick={() => {
                 props.dispatch({ type: "할일쓰기창열기" });
               }}
-              alt="해야할일적기"
-            ></a>
+            ></button>
           ) : null}
         </li>
         <li>
           <a
             href=""
+            alt="기록하기"
             onClick={() => {
               history.push("/calendar");
             }}
