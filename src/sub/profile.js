@@ -30,7 +30,7 @@ function Profile(props) {
         <div className="my_emotion">
           <img
             src={`../emotion${emotionCheck === null ? 1 : emotionCheck[0]}.png`}
-            alt=""
+            alt="선택한 감정"
           ></img>
           <p>현재프로필</p>
         </div>
@@ -43,7 +43,7 @@ function Profile(props) {
                   props.dispatch({ type: "id값전송", payload12: i + 1 });
                 }}
               >
-                <img src={`../emotion${i + 1}.png`} alt=""></img>
+                <img src={`../emotion${i + 1}.png`} alt="감정"></img>
               </p>
             );
           })}

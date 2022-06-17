@@ -83,12 +83,14 @@ function Calendar12(props) {
                 );
               })
             : null}
+          <label htmlFor="box_calendar"></label>
           <DatePicker
             todayButton="Vandaag"
             onChange={(date) => onChange(date)}
             selected={value}
             id="box_calendar"
           />
+          <label htmlFor="input_todo"></label>
           <input id="input_todo"></input>
           <div className="btn_todo">
             <button

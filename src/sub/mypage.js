@@ -46,7 +46,7 @@ function MyPage(props) {
 
           <img
             src={`../emotion${emotionCheck === null ? 1 : emotionCheck[0]}.png`}
-            alt=""
+            alt="오늘의 감정"
           ></img>
         </section>
         <section className="mypage_wrap02">
@@ -57,7 +57,7 @@ function MyPage(props) {
               }}
             >
               감정변경하기
-              <img src="../btn_detail.svg" alt=""></img>
+              <img src="../btn_detail.svg" alt="페이지 이동 화살표"></img>
             </li>
             <li
               onClick={() => {
@@ -66,7 +66,7 @@ function MyPage(props) {
             >
               <Link to="/login" className="main_nav">
                 닉네임 변경하기
-                <img src="../btn_detail.svg" alt=""></img>
+                <img src="../btn_detail.svg" alt="페이지 이동 화살표"></img>
               </Link>
             </li>
             <li
@@ -75,7 +75,7 @@ function MyPage(props) {
               }}
             >
               오늘의 달성나무는?
-              <img src="../btn_detail.svg" alt=""></img>
+              <img src="../btn_detail.svg" alt="페이지 이동 화살표"></img>
             </li>
           </ul>
         </section>

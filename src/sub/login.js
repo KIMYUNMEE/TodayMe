@@ -58,7 +58,12 @@ function LoginForm(props) {
   return (
     <div className="box_wrap">
       <form className="input_text">
-        <input type="text" placeholder="사용 할 닉네임을 적어주세요." />
+        <label htmlFor="id_name"></label>
+        <input
+          type="text"
+          id="id_name"
+          placeholder="사용 할 닉네임을 적어주세요."
+        />
         <p className="reset">
           ( 새롭게 로그인하는 경우 1일부터 다시 시작됩니다! )
         </p>
